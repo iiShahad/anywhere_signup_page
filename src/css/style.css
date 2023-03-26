@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@200;400;500;600;700&display=swap");
+/*🐾🐾🐾🐾🐾🐾 Variables 🐾🐾🐾🐾🐾🐾*/
+:root {
+  /**********Fonts**********/
+  --body-font: "Poppins", sans-serif;
+  --second-font: "Bebas Neue", cursive;
+
+  /**********Font Sizes**********/
+  --biggest-font-size: 2.75rem;
+  --bigger-font-size: 2.3rem;
+  --big-font-size: 1.75rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.938rem;
+
+  /**********Font Weight**********/
+  --font-extra-light: 200;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /**********Colors**********/
+  --primary-color: #282a37;
+  --primary-color-light: #323645;
+  --primary-color-lighter: #c4c4c4;
+  --secondary-color: #1d90f4;
+  --white-color: #fff;
+}
+
+/*🐾🐾🐾🐾🐾🐾 Base 🐾🐾🐾🐾🐾🐾*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-weight: var(--font-regular);
+  font-size: var(--body-font);
+  color: var(--white-color);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.blue-font {
+  color: var(--secondary-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+/*🐾🐾🐾🐾🐾🐾 Styling 🐾🐾🐾🐾🐾🐾*/
+
+.container {
+  height: 100vh;
+  width: 100%;
+}
+
+.background {
+  background-image: linear-gradient(
+      to left,
+      rgba(40, 42, 55, 0.301),
+      rgba(40, 42, 55, 1) 60%
+    ),
+    linear-gradient(-160deg, rgba(40, 42, 55, 0.301), rgba(40, 42, 55, 1) 70%),
+    url("../assets/image.jpg");
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+}
+
+.content {
+  width: 45%;
+  height: 100%;
+  padding: 5rem;
+}
+
+/*** NAVBAR ***/
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+
+.logo {
+  width: 200px;
+}
+
+.close {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+.nav-item {
+  color: var(--primary-color-lighter);
+  opacity: 50%;
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-medium);
+}
+
+/*** TEXT IN FORM ***/
+
+.sign-up__form h2 {
+  color: var(--primary-color-lighter);
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+  opacity: 60%;
+  margin-bottom: 0.5rem;
+}
+
+.sign-up__form span {
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-semi-bold);
+  display: inline-block; /*because margin bottom is an inline element and it doesn't have a margin*/
+  margin-bottom: 0.5rem;
+}
+
+.sign-up__form h3 {
+  color: var(--primary-color-lighter);
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-regular);
+  margin-bottom: 4rem;
+}
+
+/*** FORM ***/
+form {
+  text-align: end;
+}
+
+.form__input {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.name-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary-color-light);
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.material-icons {
+  font-size: 2rem !important;
+  color: var(--primary-color-lighter);
+}
+
+.visibility {
+  cursor: pointer;
+}
+
+.input .label {
+  position: absolute;
+  top: 1.7rem;
+  font-size: var(--h3-font-size);
+  color: var(--primary-color-lighter);
+  transition: all 0.5s;
+  pointer-events: none;
+}
+
+.input input {
+  margin-top: 1rem;
+  height: 2rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+}
+
+.input input:focus ~ span,
+.input input:valid ~ span {
+  top: 0.5rem;
+  font-size: var(--small-font-size);
+  color: #1d90f4;
+}
+
+.input-container:focus-within {
+  border: solid 4px var(--secondary-color);
+  box-shadow: 0px 0px 6px var(--secondary-color);
+}
+
+form button {
+  height: 4rem;
+  width: 48%;
+  border-radius: 2rem;
+  background: var(--secondary-color);
+  color: var(--white-color);
+  border: none;
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+}
+
+/*🐾🐾🐾🐾🐾🐾 MEDIA QUERY 🐾🐾🐾🐾🐾🐾*/
+@media screen and (max-width: 1400px) {
+  .background {
+    background: rgba(40, 42, 55, 1);
+    min-width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+  }
+
+  /*** NAVBAR ***/
+
+  nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: hsla(0, 0%, 100%, 0.15);
+    backdrop-filter: blur(1rem);
+    right: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 3rem;
+    height: 100%;
+    z-index: 10;
+    padding: 4rem 1.5rem;
+    transform: translateX(-100%);
+  }
+
+  .logo__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .logo {
+    width: 170px;
+    height: 100%;
+  }
+
+  .close {
+    display: inline-block;
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+
+  .menu {
+    display: inline-block;
+    margin-bottom: 2rem;
+    cursor: pointer;
+  }
+
+  .nav-item {
+    color: var(--primary-color);
+    opacity: 100%;
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-medium);
+  }
+
+  .open__navbar {
+    transform: translateX(0);
+    transition: all 1s;
+  }
+
+  /*** FORM ***/
+  form {
+    text-align: center;
+  }
+
+  .content {
+    width: 100%;
+    padding: 4rem 2rem;
+  }
+
+  .name-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  form button {
+    width: 60%;
+  }
+}
+
+/*🐾🐾🐾🐾🐾🐾 Used in JS 🐾🐾🐾🐾🐾🐾*/
+.error-msg {
+  color: #f7344a;
+  position: absolute;
+  font-size: var(--small-font-size) !important;
+  font-weight: var(--font-extra-light) !important;
+  bottom: -0.5rem;
+}
+
+.error {
+  border: solid 4px #f7344a;
+  box-shadow: 0px 0px 6px #f7344a;
+}
+
+.error-label {
+  color: #f7344a !important;
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px);
+  }
+  10% {
+    transform: translate(-1px, -2px);
+  }
+  20% {
+    transform: translate(-3px, 0px);
+  }
+  30% {
+    transform: translate(3px, 2px);
+  }
+  40% {
+    transform: translate(1px, -1px);
+  }
+  50% {
+    transform: translate(-1px, 2px);
+  }
+  60% {
+    transform: translate(-3px, 1px);
+  }
+  70% {
+    transform: translate(3px, 1px);
+  }
+  80% {
+    transform: translate(-1px, -1px);
+  }
+  90% {
+    transform: translate(1px, 2px);
+  }
+  100% {
+    transform: translate(1px, -2px);
+  }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <div class="background">
+      <div class="content">
+        <span class="material-icons menu"> menu </span>
+        <nav id="nav">
+          <div class="logo__container">
+            <img class="logo" src="./logo.png" alt="logo" />
+            <span class="material-icons close"> close </span>
+          </div>
+          <a href="#" class="nav-item">Home</a>
+          <a href="#" class="nav-item">Join</a>
+        </nav>
+        <div class="sign-up__form">
+          <h2>START FOR FREE</h2>
+          <span>Create new account<span class="blue-font">.</span></span>
+          <h3>Already a member? <a href="#" class="blue-font">Log in</a></h3>
+          <form class="form">
+            <div class="form__input">
+              <div class="name-row">
+                <div class="input-container">
+                  <div class="input">
+                    <input type="text" name="firstname" required="required" />
+                    <span class="label">First name</span>
+                  </div>
+                  <span class="material-icons"> badge </span>
+                  <span class="error-msg"></span>
+                </div>
+                <div class="input-container">
+                  <div class="input">
+                    <input type="text" name="lastname" required="required" />
+                    <span class="label">Last name</span>
+                  </div>
+                  <span class="material-icons"> badge </span>
+                  <span class="error-msg"></span>
+                </div>
+              </div>
+              <div class="input-container">
+                <div class="input">
+                  <input type="text" name="email" required="required" />
+                  <span class="label">Email</span>
+                </div>
+                <span class="material-icons"> email </span>
+                <span class="error-msg"></span>
+              </div>
+              <div class="input-container">
+                <div class="input">
+                  <input type="password" name="password" required="required" />
+                  <span class="label">Password</span>
+                </div>
+                <span class="material-icons visibility"> visibility </span>
+                <span class="error-msg"></span>
+              </div>
+            </div>
+            <button type="submit">Create Account</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
